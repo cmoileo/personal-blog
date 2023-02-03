@@ -1,0 +1,17 @@
+.blog-title {
+    text-align: center;
+}
+
+.navbar-container {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: solid 1px $main-white;
+    padding-bottom: 15px;
+
+    &__left, &__right {
+    display: flex;
+    gap: 75px;
+    }
+}

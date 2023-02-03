@@ -1,0 +1,53 @@
+// Titles
+
+@mixin main-tile {
+    font-family: 'Oswald', sans-serif;
+    color: $main-white;
+    font-weight: 500;
+    font-size: 68px;
+}
+@mixin second-tile {
+    font-family: 'Oswald', sans-serif;
+    color: $main-white;
+    font-weight: 300;
+    font-size: 36px;
+}
+@mixin third-tile {
+    font-family: 'Oswald', sans-serif;
+    color: $main-white;
+    font-weight: 400;
+    font-size: 28px;
+}
+@mixin fourth-tile {
+    font-family: 'Oswald', sans-serif;
+    color: $main-white;
+    font-weight: 300;
+    font-size: 24px;
+}
+@mixin main-text {
+    font-family: 'Oswald', sans-serif;
+    color: $main-white;
+    font-weight: 300;
+    font-size: 20px;
+}
+@mixin tags {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.main-title {
+    @include main-tile()
+}
+.second-title {
+    @include second-tile()
+}
+.third-title {
+    @include third-tile()
+}
+.fourth-title {
+    @include fourth-tile()
+}
+.main-text {
+    @include main-text()
+}

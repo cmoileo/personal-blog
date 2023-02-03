@@ -1,0 +1,29 @@
+* {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+img {
+    -webkit-box-shadow:0px 0px 100px 0px rgba($main-pink, .5);
+    -moz-box-shadow: 0px 0px 100px 0px rgba($main-pink, .5);
+    box-shadow: 0px 0px 100px 0px rgba($main-pink, .5);
+    border-radius: 10px;
+}
+
+body {
+    background: $bg-gradient;
+    margin: 0;
+}
+
+.main-container {
+    margin: auto;
+    margin-top: 30px;
+    width: 75%;
+}
+.pointer {
+    cursor: pointer;
+}
