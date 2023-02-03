@@ -1,5 +1,5 @@
-import MainIllustration from '../../../assets/main-illustration.png'
-import Clock from "../../../assets/clock.svg"
+import MainIllustration from '../../assets/main-illustration.png'
+import Clock from "../../assets/clock.svg"
 
 export default function MainLatest() {
   return (

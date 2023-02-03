@@ -1,11 +1,24 @@
 * {
     text-decoration: none;
+    padding: 0;
 }
 
 h1, h2, h3, h4, p {
     margin: 0;
     letter-spacing: 1px;
 }
+
+input:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input, select, textarea {
+    @include main-text;
+    }
 
 img {
     -webkit-box-shadow:0px 0px 100px 0px rgba($main-pink, .5);

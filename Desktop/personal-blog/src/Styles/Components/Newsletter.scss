@@ -1,0 +1,39 @@
+.newsletter-container {
+    margin-top: 125px;
+    margin-bottom: 125px;
+
+        &__texts {
+            display: flex;
+            gap: 200px;
+            margin-top: 50px;
+        }
+}
+
+.newsletter-cta {
+    margin-top: 30px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+
+        &__input {
+            width: 350px;
+            height: 50px;
+            background: transparent;
+            border: $main-blue solid 1px;
+            caret-color: $main-white;
+            padding-left: 15px;
+
+                &::placeholder {
+                    color: $main-white;
+                    @include main-text;
+                    opacity: .5;
+                  }
+        }
+        &__button {
+            height: 52px;
+            width: 120px;
+            background: $main-blue;
+            border: $main-blue solid 1px;
+            @include main-text;
+        }
+}

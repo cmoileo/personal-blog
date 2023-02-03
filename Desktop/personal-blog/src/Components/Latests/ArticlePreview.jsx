@@ -1,5 +1,5 @@
-import SecondaryIllustration from "../../../assets/second-illustration.png"
-import Clock from "../../../assets/clock.svg"
+import SecondaryIllustration from "../../assets/second-illustration.png"
+import Clock from "../../assets/clock.svg"
 
 export default function ArticlePreview() {
   return (
