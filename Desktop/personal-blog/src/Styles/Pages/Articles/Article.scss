@@ -1,8 +1,10 @@
 .article-main-container {
+    margin: auto;
     margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
 
     &__illustration {
         width: 80%;
