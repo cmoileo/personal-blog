@@ -1,12 +1,38 @@
 .article-main-container {
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &__illustration {
-        width: 100%;
+        width: 80%;
         object-fit: cover;
         background-size: 50%;
+    }
+
+    &__header {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        &__infos {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            &__time {
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__text-content {
+        margin-top: 100px
     }
 }

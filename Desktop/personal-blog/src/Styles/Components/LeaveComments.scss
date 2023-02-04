@@ -1,0 +1,24 @@
+.leave-comments-container {
+    margin-top: 50px;
+
+    &__form {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        & * {
+            width: 100%;
+        }
+    
+        & input, textarea {
+            background-color: $main-purple;
+            border: $main-blue 1px solid;
+            resize: none;
+        }
+    }
+
+   
+
+}
