@@ -5,6 +5,7 @@ import Newsletter from "../../Components/Newletter/Newsletter";
 import MainIllustration from '../../assets/main-illustration.png'
 import Clock from '../../assets/clock.svg'
 import LeaveComments from "../../Components/Comments/LeaveComments";
+import CommentsList from "../../Components/Comments/CommentsList";
 
 export default function Article() {
   return (
@@ -43,6 +44,7 @@ export default function Article() {
               </p>
             </div>
             <LeaveComments />
+            <CommentsList />
         </div>
 
         <Latests />

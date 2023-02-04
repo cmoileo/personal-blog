@@ -14,6 +14,7 @@
     display: flex;
     gap: 100px;
     margin-top: 50px;
+    cursor: pointer;
 
     &__left, &__right {
         width: 50%;
@@ -53,6 +54,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    cursor: pointer;
 
         &__texts__tags {
             margin-top: 5px;
