@@ -12,15 +12,6 @@ import { getStorage } from "firebase/storage";
 //   appId: process.env.FIREBASE_APP_ID,
 // };
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBIz5dxmeE1QSDvHSzzd5UpQDT3Qm2xTu4",
-  authDomain: "personal-blog-35ee9.firebaseapp.com",
-  projectId: "personal-blog-35ee9",
-  storageBucket: "personal-blog-35ee9.appspot.com",
-  messagingSenderId: "206748298610",
-  appId: "1:206748298610:web:3be7f029b352b0f50b01eb",
-};
-
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const storage = getStorage(app);
