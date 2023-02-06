@@ -1,0 +1,50 @@
+.article-main-container {
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+
+    @media screen and (max-width: 800px) {
+        width: 90%;
+        margin-top: 75px;
+    }
+
+
+    &__illustration {
+        width: 80%;
+        object-fit: cover;
+        background-size: 50%;
+    }
+
+    &__header {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        &__infos {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            @media screen and (max-width: 700px) {
+                flex-direction: column;
+            }
+
+            &__time {
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__text-content {
+        margin-top: 100px
+    }
+}
