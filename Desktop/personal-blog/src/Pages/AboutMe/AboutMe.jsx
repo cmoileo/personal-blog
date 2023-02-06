@@ -4,11 +4,11 @@ import Myself from '../../Components/Myself/Myself'
 import ArticlePreview from '../../Components/Latests/ArticlePreview'
 import Newsletter from '../../Components/Newletter/Newsletter'
 
-export default function AboutMe() {
+export default function AboutMe({navBarAnimation, setNavBarAnimation}) {
   return (
     <div className="main-container">
       <h1 className='second-title blog-title pointer'>Léo's Blog</h1>
-      <Navbar />
+      <Navbar navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />
       <Myself />
       <div className="secondary-latest-articles" style={{marginBottom: "75px"}}>
        <ArticlePreview />

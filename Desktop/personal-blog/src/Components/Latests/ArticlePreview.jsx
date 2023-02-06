@@ -1,8 +1,10 @@
 import SecondaryIllustration from "../../assets/second-illustration.png"
 import Clock from "../../assets/clock.svg"
+import Fade from 'react-reveal/Fade';
 
 export default function ArticlePreview() {
   return (
+  <Fade right>
     <div className="article-preview-container">
         <img src={SecondaryIllustration} alt="" />
         <div className="article-preview-container__texts">
@@ -19,5 +21,6 @@ export default function ArticlePreview() {
             </div>
         </div>
     </div>
+  </Fade>
   )
 }

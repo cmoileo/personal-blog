@@ -16,8 +16,17 @@
     margin-top: 50px;
     cursor: pointer;
 
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
     &__left, &__right {
         width: 50%;
+
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+        }
     }
     
     &__right {
@@ -56,6 +65,11 @@
     align-items: left;
     cursor: pointer;
 
+    @media screen and (max-width: 1000px) {
+        margin: auto;
+        margin-top: 50px;
+    }
+
         &__texts__tags {
             margin-top: 5px;
             display: flex;
@@ -84,4 +98,8 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
 }

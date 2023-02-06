@@ -36,6 +36,13 @@ body {
     margin: auto;
     margin-top: 30px;
     width: 75%;
+
+    @media screen and (max-width: 1000px) {
+        width: 85%;
+    }
+    @media screen and (max-width: 500px) {
+        width: 90%;
+    }
 }
 .pointer {
     cursor: pointer;

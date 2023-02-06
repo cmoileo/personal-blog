@@ -5,24 +5,55 @@
     color: $main-white;
     font-weight: 500;
     font-size: 68px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 50px;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 40px;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: 30px;
+    }
 }
 @mixin second-tile {
     font-family: 'Oswald', sans-serif;
     color: $main-white;
     font-weight: 300;
     font-size: 36px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 30px;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 25px;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: 26px;
+    }
 }
 @mixin third-tile {
     font-family: 'Oswald', sans-serif;
     color: $main-white;
     font-weight: 400;
     font-size: 28px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 22px;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 20px;
+    }
 }
 @mixin fourth-tile {
     font-family: 'Oswald', sans-serif;
     color: $main-white;
     font-weight: 300;
     font-size: 24px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 18px;
+    }
 }
 @mixin main-text {
     font-family: 'Oswald', sans-serif;
@@ -30,11 +61,19 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 30px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 14px;
+    }
 }
 @mixin tags {
     font-family: 'Oswald', sans-serif;
     font-weight: 100;
     font-size: 14px;
+
+    @media screen and (max-width: 1000px) {
+        font-size: 12px;
+    }
 }
 
 .main-title {

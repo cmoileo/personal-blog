@@ -14,5 +14,44 @@
     &__left, &__right {
     display: flex;
     gap: 75px;
+
+    @media screen and (max-width: 1000px) {
+        width: 50%;
+        }
+    }
+
+    &__left {
+        @media screen and (max-width: 1000px) {
+            gap: 15px
+        }
+    }
+}
+
+h3 {
+    transition: 1s;
+}
+
+.animBarLeft:after {
+    display      : block;
+    content      : '';
+    border-bottom: 1px $main-blue solid;
+    transition   : transform 300ms ease-in-out;
+    transform: scale(0);
+    transform-origin: 100% 0%;
+    animation: animBar forwards .5s;
+}
+.animBarRight:after {
+    display      : block;
+    content      : '';
+    border-bottom: 1px $main-blue solid;
+    transition   : transform 300ms ease-in-out;
+    transform: scale(0);
+    transform-origin: 0% 100%;
+    animation: animBar forwards .5s;
+}
+
+@keyframes animBar {
+    to {
+        transform: scaleX(1);
     }
 }

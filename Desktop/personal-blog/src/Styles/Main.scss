@@ -3,9 +3,11 @@
 
 @import "Base/Base.scss";
 
-@import "Pages/Articles/Articles.scss";
 @import "Pages/Articles/ArticlePreview.scss";
 @import "Pages/Articles/Article.scss";
+@import "Pages/Admin.scss";
+@import "Pages/WriteNewArticle.scss";
+@import "Pages/Login.scss";
 
 @import "Components/Navbar.scss";
 @import "Components/Newsletter.scss";

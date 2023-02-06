@@ -6,12 +6,14 @@ import MainIllustration from '../../assets/main-illustration.png'
 import Clock from '../../assets/clock.svg'
 import LeaveComments from "../../Components/Comments/LeaveComments";
 import CommentsList from "../../Components/Comments/CommentsList";
+import Slide from 'react-reveal/Slide';
 
 export default function Article() {
   return (
     <div className="main-container">
         <h1 className='second-title blog-title pointer'>Léo's Blog</h1>
         <Navbar />
+      <Slide right>
         <div className="article-main-container">
             <img src={MainIllustration} className="article-main-container__illustration" />
             <div className="article-main-container__header">
@@ -46,6 +48,7 @@ export default function Article() {
             <LeaveComments />
             <CommentsList />
         </div>
+        </Slide>
 
         <Latests />
         <Newsletter />

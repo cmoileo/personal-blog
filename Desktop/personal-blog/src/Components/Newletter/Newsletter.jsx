@@ -1,6 +1,9 @@
+import Reveal from 'react-reveal/Reveal';
 
 export default function Newsletter() {
+  
   return (
+    <Reveal>
     <div className="newsletter-container">
         <h1 className="main-title">Newsletter</h1>
      <div className="newsletter-container__texts">
@@ -24,5 +27,6 @@ export default function Newsletter() {
         </div>
      </div>
     </div>
+    </Reveal>
   )
 }

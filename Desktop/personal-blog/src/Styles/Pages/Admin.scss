@@ -1,0 +1,44 @@
+.articles-list-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: $main-blue 1px solid;
+    padding: 10px;
+    background: rgba($main-blue, .2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    & img {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    &__icons {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+
+.admin-container {
+
+    &__title {
+        margin-top: 75px;
+    }
+
+    &__button {
+        font-size: 20px;
+        color: $main-white;
+        background-color: $main-blue;
+        padding: 15px 40px;
+        border: solid $main-blue 1px;
+        display: flex;
+        margin: auto;
+        margin-top: 75px;
+        margin-bottom: 75px;
+    }
+}

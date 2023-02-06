@@ -1,7 +1,9 @@
 import Me from "../../assets/me.jpg"
+import Fade from 'react-reveal/Fade';
 
 export default function Myself() {
   return (
+    <Fade left>
     <div className="myself-main-container">
         <h1 className="main-title myself-main-container__main-title">About Me</h1>
         <p className="main-text myself-main-container__main-text">
@@ -11,7 +13,7 @@ export default function Myself() {
             and efficient code. <br /> <br />
             When I'm not coding, you can find me tinkering with new technologies, reading up on the latest trends, <br />
             or hiking in the great outdoors. I'm always on the lookout for new challenges and opportunities to learn and grow, <br />
-            and I can't wait to share my journey with you. So come on in, grab a cup of coffee, and let's dive into the world of </p>
+            and I can't wait to share my journey with you. </p>
         <img src={Me} className="myself-main-container__pp" />
         <h1 className="main-title myself-main-container__main-title">THINGS I LIKE</h1>
         <div className="myself-main-container__hobbies">
@@ -33,5 +35,6 @@ export default function Myself() {
         </p>
         <h1 className="main-title myself-main-container__second-main-title">From the blog</h1>
     </div>
+    </Fade>
   )
 }

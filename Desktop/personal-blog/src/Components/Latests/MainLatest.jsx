@@ -1,8 +1,11 @@
 import MainIllustration from '../../assets/main-illustration.png'
 import Clock from "../../assets/clock.svg"
+import Fade from 'react-reveal/Fade';
 
 export default function MainLatest() {
+
   return (
+  <Fade right>
     <div className="main-latest-article-container">
         <div className="main-latest-article-container__left">
           <img className='main-illustration' src={MainIllustration} alt="" />
@@ -24,5 +27,6 @@ export default function MainLatest() {
            </div>
         </div>
     </div>
+  </Fade>
   )
 }

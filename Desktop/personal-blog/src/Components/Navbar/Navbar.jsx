@@ -1,25 +1,31 @@
 import { useNavigate } from "react-router-dom"
 
-export default function Navbar() {
+export default function Navbar({navBarAnimation, setNavBarAnimation}) {
   const navigate = useNavigate()
 
   const handleNavigateToAM = () => {
     navigate("/about-me")
+    setNavBarAnimation("AboutMe")
   }
 
   const handleNavigateToArticles = () => {
     navigate("/")
+    setNavBarAnimation("Articles")
+  }
+
+  const handleNavigateToLogin = () => {
+    navigate("/login")
   }
 
   return (
     <>
       <div className="navbar-container">
       <div className="navbar-container__left">
-        <h3 className='third-title pointer' onClick={handleNavigateToAM}>About Me</h3>
-        <h3 className='third-title pointer' onClick={handleNavigateToArticles}>Articles</h3>
+        <h3 className={navBarAnimation === "AboutMe" ? "third-title pointer animBarLeft" : "third-title pointer"} onClick={handleNavigateToAM}>About Me</h3>
+        <h3 className={navBarAnimation !== "AboutMe" ? "third-title pointer animBarRight" : "third-title pointer"} onClick={handleNavigateToArticles}>Articles</h3>
       </div>
       <div className="navbar-right">
-        <h3 className='third-title pointer'>Log In</h3>
+        <h3 className='third-title pointer' onClick={handleNavigateToLogin}>Log In</h3>
       </div>
     </div>
     </>

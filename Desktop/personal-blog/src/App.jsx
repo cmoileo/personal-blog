@@ -8,17 +8,25 @@ import Articles from "./Pages/Articles/Articles"
 import Article from "./Pages/Articles/Article"
 import AboutMe from './Pages/AboutMe/AboutMe'
 import Register from './Pages/Register/Register'
+import Admin from './Pages/Private/Admin'
 import './Styles/Main.scss'
+import WriteNewArticle from "./Pages/Private/WriteNewArticle";
+import Login from "./Pages/Login/Login";
+import { useState } from "react";
 
 function App() {
+  const [navBarAnimation, setNavBarAnimation] = useState("Articles")
 
   return (
     <Router>
      <Routes>
-     <Route path="/" element={<Articles />} />
+     <Route path="/" element={<Articles navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />} />
      <Route path="/article" element={<Article />} />
-     <Route path="/about-me" element={<AboutMe />} />
+     <Route path="/about-me" element={<AboutMe navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />} />
      <Route path="/register" element={<Register />} />
+     <Route path="/admin" element={<Admin />} />
+     <Route path="/login" element={<Login />} />
+     <Route path="/new-article" element={<WriteNewArticle />} />
      <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
   </Router>

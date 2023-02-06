@@ -6,6 +6,12 @@
     align-items: center;
     width: 80%;
 
+    @media screen and (max-width: 800px) {
+        width: 90%;
+        margin-top: 75px;
+    }
+
+
     &__illustration {
         width: 80%;
         object-fit: cover;
@@ -25,6 +31,10 @@
             width: 100%;
             justify-content: space-between;
             align-items: center;
+
+            @media screen and (max-width: 700px) {
+                flex-direction: column;
+            }
 
             &__time {
                 display: flex;
