@@ -21,7 +21,7 @@ function App() {
     <Router>
      <Routes>
      <Route path="/" element={<Articles navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />} />
-     <Route path="/article" element={<Article />} />
+     <Route path="/article" element={<Article navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="/about-me" element={<AboutMe navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />} />
      <Route path="/register" element={<Register />} />
      <Route path="/admin" element={<Admin />} />

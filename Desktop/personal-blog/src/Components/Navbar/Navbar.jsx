@@ -4,13 +4,13 @@ export default function Navbar({navBarAnimation, setNavBarAnimation}) {
   const navigate = useNavigate()
 
   const handleNavigateToAM = () => {
+    setNavBarAnimation("AboutMe");
     navigate("/about-me")
-    setNavBarAnimation("AboutMe")
   }
 
   const handleNavigateToArticles = () => {
+    setNavBarAnimation("Articles");
     navigate("/")
-    setNavBarAnimation("Articles")
   }
 
   const handleNavigateToLogin = () => {

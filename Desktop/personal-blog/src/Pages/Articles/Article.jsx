@@ -8,11 +8,11 @@ import LeaveComments from "../../Components/Comments/LeaveComments";
 import CommentsList from "../../Components/Comments/CommentsList";
 import Slide from 'react-reveal/Slide';
 
-export default function Article() {
+export default function Article({navBarAnimation, setNavBarAnimation}) {
   return (
     <div className="main-container">
         <h1 className='second-title blog-title pointer'>Léo's Blog</h1>
-        <Navbar />
+        <Navbar navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>
       <Slide right>
         <div className="article-main-container">
             <img src={MainIllustration} className="article-main-container__illustration" />
