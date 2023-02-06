@@ -1,12 +1,15 @@
 import Navbar from '../../Components/Navbar/Navbar'
 import { UserContext } from '../../Contexts/UserContext'
 import { useContext, useRef } from 'react'
-import {app} from '../../Firebase/FirebaseConfig';
+import { getAuth } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-export default function Login() {
-  const {emailInput, setEmailInput, passwordInput, setPasswordInput, signIn}=useContext(UserContext)
+export default function Login({navBarAnimation, setNavBarAnimation}) {
+  const {emailInput, setEmailInput, passwordInput, setPasswordInput, signIn, currentUser, SetcurrentUser}=useContext(UserContext)
   const emailInputRef = useRef(null)
   const passwordInputRef = useRef(null)
+
+  const navigate = useNavigate();
 
   const handleChange = () => {
    setEmailInput(emailInputRef.current.value)
@@ -14,16 +17,16 @@ export default function Login() {
   } 
 
   const handleSignIn = async (e) => {
-    e.preventDefault()
-   const cred = await signIn(
-    emailInput, passwordInput
-    );
+    e.preventDefault();
+    const cred = await signIn(emailInput, passwordInput);
+    SetcurrentUser(await getAuth().currentUser.uid);
+    await navigate("/admin")
   };
 
   return (
     <div className="main-container">
          <h1 className='second-title blog-title pointer'>Léo's Blog</h1>
-         <Navbar />
+         <Navbar navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>
          <div className="login-container">
             <h2 className="second-title">
                 Log In
