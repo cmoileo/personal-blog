@@ -4,13 +4,16 @@ import ArticlesList from './ArticlesList'
 import { UserContext } from '../../Contexts/UserContext'
 import { useContext } from 'react'
 import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function Admin({navBarAnimation, setNavBarAnimation}) {
   const {currentUser}=useContext(UserContext)
+  const navigate = useNavigate()
 
   if (!currentUser) {
     return <Navigate to='/'></Navigate>
 }
+
 
   return (
     <div className="main-container">
@@ -24,7 +27,7 @@ export default function Admin({navBarAnimation, setNavBarAnimation}) {
         <ArticlesList />
         <ArticlesList />
         <ArticlesList />
-        <button className="admin-container__button">Write new article</button>
+        <button onClick={() => navigate('/new-article')} className="admin-container__button">Write new article</button>
       </div>
       <Footer />
     </div>
