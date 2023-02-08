@@ -42,8 +42,8 @@ export default function WriteNewArticle({navBarAnimation, setNavBarAnimation}) {
 
     const q = query(collection(db, "Articles"));
     const docsSnap = await getDocs(q)
-    let i = 0
-    docsSnap.forEach(doc => { i++; console.log(i); })
+    let i = -1
+    docsSnap.forEach(doc => { i = doc._document.key.path.segments[6]; })
 
     const date = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -61,12 +61,13 @@ export default function WriteNewArticle({navBarAnimation, setNavBarAnimation}) {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
          postImageUrl = downloadURL
-         setDoc(doc(db, "Articles", `${i+1}`), {
+         setDoc(doc(db, "Articles", `${+i + +1}`), {
           name: `${nameRef.current.value}`,
           content: `${textAreaRef.current.value}`,
           image: `${postImageUrl}`,
           date: `${currentDate}`,
-          tags: `${tagArray}`
+          tags: `${tagArray}`,
+          index: `${+i + +1}`
         })
         })
      }

@@ -17,7 +17,6 @@ export function UserContextProvider(props) {
 
     const signIn = (emailInput, passwordInput) => signInWithEmailAndPassword(auth, emailInput, passwordInput)
 
-    const [data, setData] = useState([])
     const [articlesNumber, setArticlesNumber] = useState(-1)
     const [collectionData, setCollectionData] = useState([])
 
@@ -26,10 +25,6 @@ export function UserContextProvider(props) {
       const docsSnap = await getDocs(q)
       let i = -1
       docsSnap.forEach(doc => { i++, setCollectionData(oldArray => [...oldArray, doc.data()]); setArticlesNumber(i)})
-  
-      const docRef = doc(db, "Articles", `${i}`);
-  
-      setData((await getDoc(docRef)).data())
     }
   
     useEffect(() => {
@@ -37,7 +32,7 @@ export function UserContextProvider(props) {
     }, []);
 
   return (
-    <UserContext.Provider value={{emailInput, setEmailInput, passwordInput, setPasswordInput, signIn, currentUser, SetcurrentUser, data, collectionData, articlesNumber}}>
+    <UserContext.Provider value={{emailInput, setEmailInput, passwordInput, setPasswordInput, signIn, currentUser, SetcurrentUser, collectionData, setCollectionData, articlesNumber}}>
         {props.children}
     </UserContext.Provider>
   )

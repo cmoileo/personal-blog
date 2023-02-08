@@ -10,9 +10,9 @@ export default function Admin({navBarAnimation, setNavBarAnimation}) {
   const {currentUser}=useContext(UserContext)
   const navigate = useNavigate()
 
-  if (!currentUser) {
-    return <Navigate to='/'></Navigate>
-}
+//   if (!currentUser) {
+//     return <Navigate to='/'></Navigate>
+// }
 
 
   return (
@@ -23,9 +23,6 @@ export default function Admin({navBarAnimation, setNavBarAnimation}) {
         <h2 className="second-title admin-container__title">
           Published Articles
         </h2>
-        <ArticlesList />
-        <ArticlesList />
-        <ArticlesList />
         <ArticlesList />
         <button onClick={() => navigate('/new-article')} className="admin-container__button">Write new article</button>
       </div>

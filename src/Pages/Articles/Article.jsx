@@ -29,7 +29,7 @@ export default function Article({navBarAnimation, setNavBarAnimation}) {
                   <p>{collectionData[articleTarget]?.tags}</p>
                 </div>
                 <div className="article-main-container__header__infos__time">
-                  <p className="main-text">collectionData[articleTarget]?.date</p>
+                  <p className="main-text">{collectionData[articleTarget]?.date}</p>
                   <img src={Clock} alt="" />
                   <p className="main-text">5-7 minutes read</p>
                 </div>

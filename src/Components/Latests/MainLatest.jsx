@@ -6,8 +6,6 @@ import { useContext } from 'react';
 export default function MainLatest() {
   const {collectionData, articlesNumber}=useContext(UserContext)
 
-  console.log(articlesNumber)
-
   return (
   <Fade right>
     <div className="main-latest-article-container">
