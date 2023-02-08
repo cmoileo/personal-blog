@@ -11,11 +11,11 @@ export default function Latests() {
         </Fade>
         <MainLatest />
         </div>
+        <Fade right>
         <div className="secondary-latest-articles">
-      <ArticlePreview />
-      <ArticlePreview />
-      <ArticlePreview />
+           <ArticlePreview />
         </div>
+        </Fade>
      </div>
   )
 }
