@@ -24,7 +24,7 @@ export function UserContextProvider(props) {
     async function getCollection() {
       const q = query(collection(db, "Articles"));
       const docsSnap = await getDocs(q)
-      let i = 0
+      let i = -1
       docsSnap.forEach(doc => { i++, setCollectionData(oldArray => [...oldArray, doc.data()]); setArticlesNumber(i)})
   
       const docRef = doc(db, "Articles", `${i}`);
