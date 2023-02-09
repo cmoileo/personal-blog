@@ -10,9 +10,9 @@ export default function Admin({navBarAnimation, setNavBarAnimation}) {
   const {currentUser}=useContext(UserContext)
   const navigate = useNavigate()
 
-//   if (!currentUser) {
-//     return <Navigate to='/'></Navigate>
-// }
+  if (!currentUser) {
+    return <Navigate to='/'></Navigate>
+}
 
 
   return (

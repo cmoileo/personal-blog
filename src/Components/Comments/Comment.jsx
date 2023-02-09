@@ -1,12 +1,35 @@
+import { useContext, useEffect, useState } from 'react';
 import Slide from 'react-reveal/Slide';
+import { UserContext } from '../../Contexts/UserContext';
+import { getDoc, doc } from "firebase/firestore";
+import { db } from '../../Firebase/FirebaseConfig';
 
 export default function Comment() {
+  const [commmentsState, setCommentsState] = useState([])
+
+  async function getDocData() {
+    const articleDoc = doc(db, "Articles", localStorage.getItem('articleTarget'));
+    const articleDocData = (await getDoc(articleDoc)).data()
+
+    setCommentsState(articleDocData.comment)
+}
+
+  useEffect(() => {
+    getDocData()
+  }, []);
+  
+
   return (
-    <Slide left>
-    <div className="comment-main-container">
-        <p className="comment-main-container__username third-title">Ern667</p>
-        <p className="comment-main-container__content main-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus molestiae vel, placeat at repellendus excepturi veritatis, ratione qui error facilis molestias, sit vero deleniti et aliquid incidunt velit. Animi, necessitatibus?</p>
+    <>
+{commmentsState.map((value) => {
+  console.log(value.id)
+    return (
+      <div className="comment-main-container" id={value.id} key={value.id}>
+      <p className="comment-main-container__username third-title">{value.name}</p>
+      <p className="comment-main-container__content main-text">{value.content}</p>
     </div>
-    </Slide>
+    )
+  })}
+  </>
   )
 }

@@ -1,11 +1,9 @@
 import { createContext, useState, useEffect } from "react";
 import {auth} from "../Firebase/FirebaseConfig"
 import {
-  signInWithEmailAndPassword,
-  onAuthStateChanged
+  signInWithEmailAndPassword
 } from "firebase/auth"
-import {doc} from 'firebase/firestore'
-import { collection, query, getDocs, getDoc } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 import {db} from "../Firebase/FirebaseConfig"
 
 export const UserContext = createContext()
@@ -26,6 +24,8 @@ export function UserContextProvider(props) {
       let i = -1
       docsSnap.forEach(doc => { i++, setCollectionData(oldArray => [...oldArray, doc.data()]); setArticlesNumber(i)})
     }
+
+
   
     useEffect(() => {
       getCollection()

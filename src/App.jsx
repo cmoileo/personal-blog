@@ -23,7 +23,6 @@ function App() {
      <Route path="/" element={<Articles navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />} />
      <Route path="/article" element={<Article navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="/about-me" element={<AboutMe navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation} />} />
-     <Route path="/register" element={<Register />} />
      <Route path="/admin" element={<Admin navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="/login" element={<Login navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="/new-article" element={<WriteNewArticle navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />

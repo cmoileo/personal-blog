@@ -67,7 +67,8 @@ export default function WriteNewArticle({navBarAnimation, setNavBarAnimation}) {
           image: `${postImageUrl}`,
           date: `${currentDate}`,
           tags: `${tagArray}`,
-          index: `${+i + +1}`
+          index: `${+i + +1}`,
+          comment: {}
         })
         })
      }
