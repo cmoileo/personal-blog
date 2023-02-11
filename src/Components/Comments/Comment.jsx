@@ -21,12 +21,11 @@ export default function Comment() {
 
   return (
     <>
-{commmentsState.map((value) => {
-  console.log(value.id)
+{commmentsState.map((value, index) => {
     return (
-      <div className="comment-main-container" id={value.id} key={value.id}>
-      <p className="comment-main-container__username third-title">{value.name}</p>
-      <p className="comment-main-container__content main-text">{value.content}</p>
+      <div className="comment-main-container" id={value.id} key={index}>
+        <p className="comment-main-container__username third-title">{value.name}</p>
+        <p className="comment-main-container__content main-text">{value.content}</p>
     </div>
     )
   })}

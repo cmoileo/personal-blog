@@ -1,0 +1,9 @@
+.edit-article-container {
+    margin-top: 100px;
+
+    & textarea {
+        background: none;
+        width: 100%;
+        border: solid 1px $main-blue
+    }
+}

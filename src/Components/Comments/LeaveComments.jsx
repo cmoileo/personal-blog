@@ -6,7 +6,6 @@ import { getDoc } from "firebase/firestore";
 import { UserContext } from '../../Contexts/UserContext';
 
 export default function LeaveComments() {
-  const {collectionData} = useContext(UserContext)
 
   let comments = {}
 

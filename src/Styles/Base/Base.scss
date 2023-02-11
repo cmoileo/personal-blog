@@ -12,6 +12,10 @@ input:focus, textarea:focus {
     outline: none;
 }
 
+textarea {
+    resize: none
+}
+
 button {
     cursor: pointer;
 }

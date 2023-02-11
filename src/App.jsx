@@ -13,6 +13,7 @@ import './Styles/Main.scss'
 import WriteNewArticle from "./Pages/Private/WriteNewArticle";
 import Login from "./Pages/Login/Login";
 import { useState } from "react";
+import ModifyArticle from "./Pages/Private/ModifyArticle";
 
 function App() {
   const [navBarAnimation, setNavBarAnimation] = useState("Articles")
@@ -26,6 +27,7 @@ function App() {
      <Route path="/admin" element={<Admin navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="/login" element={<Login navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="/new-article" element={<WriteNewArticle navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
+     <Route path="/edit-article" element={<ModifyArticle navBarAnimation={navBarAnimation} setNavBarAnimation={setNavBarAnimation}/>} />
      <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
   </Router>
